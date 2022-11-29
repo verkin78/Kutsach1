@@ -1,4 +1,15 @@
 public class Main {
+
+    public static void findAllSalery(Employee[] employees) {
+        int sum = 0;
+        for (int i = 0; i < employees.length; i++) {
+            sum += employees[i].getSalery();
+        }
+        System.out.println();
+        System.out.println("Сумма ежемесячных зарплат всех сотрудников: " + sum);
+        System.out.println("Среднее значение зарплат: " + sum/employees.length);
+    }
+
     public static void main(String[] args) {
         Employee[] employees = new Employee[10];
         employees[0] = new Employee("Андреев Андрей Андреевич", 1, 15000);
@@ -14,7 +25,8 @@ public class Main {
 
         for (int i = 0; i < employees.length; i++) {
             System.out.println(employees[i]);
-
         }
+        findAllSalery(employees);
     }
+
 }
