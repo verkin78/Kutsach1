@@ -1,5 +1,18 @@
 public class Main {
 
+    public static void findMinSalery(Employee[] employees) {
+        int min = employees[0].getSalery();
+        Employee minimum = employees[0];
+        for (int i = 0; i < employees.length; i++) {
+            if (min > employees[i].getSalery()) {
+                min = employees[i].getSalery();
+                minimum = employees[i];
+            }
+        }
+        System.out.println("Сотрудник с самой низкой зарплатоц: ");
+        System.out.println(minimum);
+    }
+
     public static void findAllSalery(Employee[] employees) {
         int sum = 0;
         for (int i = 0; i < employees.length; i++) {
@@ -27,6 +40,7 @@ public class Main {
             System.out.println(employees[i]);
         }
         findAllSalery(employees);
+        findMinSalery(employees);
     }
 
 }
