@@ -41,7 +41,7 @@ public class Employee {
     public String toString() {
         return
                 "ID=" + ID +
-                " ФИО" + fullName + "." +
+                " ФИО " + fullName + "." +
                 " Номер отдела: " + departement +
                 ", зарплата сорудника: " + salery + ".";
     }
