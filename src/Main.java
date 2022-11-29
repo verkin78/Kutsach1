@@ -13,6 +13,19 @@ public class Main {
         System.out.println(minimum);
     }
 
+    public static void findMaxSalery(Employee[] employees) {
+        int max = employees[0].getSalery();
+        Employee maximum = employees[0];
+        for (int i = 0; i < employees.length; i++) {
+            if (max < employees[i].getSalery()) {
+                max = employees[i].getSalery();
+                maximum = employees[i];
+            }
+        }
+        System.out.println("Сотрудник с самой высокой зарплатоц: ");
+        System.out.println(maximum);
+    }
+
     public static void findAllSalery(Employee[] employees) {
         int sum = 0;
         for (int i = 0; i < employees.length; i++) {
@@ -41,6 +54,7 @@ public class Main {
         }
         findAllSalery(employees);
         findMinSalery(employees);
+        findMaxSalery(employees);
     }
 
 }
